@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GM Medical Store</title>
+    <style>
+      body {
+        background: url(PIC/tablet.jpg) no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      #box {
+        background: url(PIC/logo.png) no-repeat skyblue;
+        background-position: left top;
+        border: 2px rgb(207, 26, 26) solid;
+        width: 80%;
+        height: 300px;
+        border-radius: 10px 12px 14px;
+        padding: 40px;
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 40px;
+      }
+      #main {
+        background: url(PIC/service.png) no-repeat red;
+        background-position: left top;
+        border: 2px rgb(207, 26, 26) solid;
+        width: 95%;
+        height: 300px;
+        border-radius: 10px 12px 14px;
+        padding: 25px;
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 40px;
+        background-size: contain;
+      }
+      #Hell {
+        border-radius: 15px;
+        padding: 15px;
+        font-size: 15px;
+      }
+      #rd {
+        font-size: large;
+      }
+      #ret {
+        width: 90%;
+        margin: 30px;
+        height: 2400px;
+        border: 1px black solid;
+        border-radius: 20px;
+        background: url(PIC/me.jpg) no-repeat;
+        background-size: cover;
+        padding: 35px;
+        display: inline-flex;
+      }
+      #p1 {
+        text-align: justify;
+        padding: 1px 0 0 50px;
+        font-family: italic;
+        height: 600px;
+        width: 400px;
+        font-size: 30px;
+        color: aqua;
+      }
+      #p2 {
+        text-align: justify;
+        padding: 20px 50px;
+        margin: 0px 50px;
+        height: 600px;
+        width: 400px;
+        font-size: xx-large;
+        color: mediumspringgreen;
+      }
+      #p3 {
+        padding: 1px 0 0 40px;
+        text-align: justify;
+        padding-right: 20px;
+        height: 600px;
+        width: 400px;
+        font-size: 50px;
+        color: mediumseagreen;
+      }
+      #box2 {
+        border: 1px solid black;
+        font-size: 30px;
+        background: url(PIC/Medicine.jpg) no-repeat;
+        background-size: cover;
+        color: black;
+        font-weight: bold;
+        padding: 15px;
+      }
+      #list {
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px;
+        display: inline-flex;
+        width: 1250px;
+      }
+      #med1 {
+        border: 0px solid orange;
+        border-radius: 12px;
+        width: 20%;
+        height: 40px;
+        background-color: chartreuse;
+        font-size: xx-large;
+      }
+      #med2 {
+        border: 0px solid orange;
+        border-radius: 12px;
+        width: 20%;
+        height: 40px;
+        background-color: rgb(40, 68, 12);
+        font-size: xx-large;
+      }
+      #med3 {
+        border: 0px solid orange;
+        border-radius: 12px;
+        width: 20%;
+        height: 40px;
+        background-color: rgb(51, 48, 65);
+        font-size: xx-large;
+      }
+      #med4 {
+        border: 0px solid orange;
+        border-radius: 12px;
+        width: 20%;
+        height: 40px;
+        background-color: rgb(169, 201, 136);
+        font-size: xx-large;
+      }
+      #tube {
+        text-align: justify;
+        padding: 100px;
+        margin-left: 250px;
+        font-size: xx-large;
+        color: mediumspringgreen;
+      }
+      h2 {
+        font-size: xx-large;
+      }
+
+      .column {
+        display: inline-flex;
+        width: 33.33%;
+        padding: px;
+      }
+      .row::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      #src {
+        border: 0 solid;
+        border-radius: 18px;
+        height: 600px;
+        width: 1330px;
+        margin: 0;
+
+        background-image: url(PIC/Cap.png);
+        font-size: xx-large;
+      }
+      #fn {
+        padding: 15px;
+        border-radius: 12px;
+      }
+
+      #td {
+        border: 1px solid black;
+        font-size: 40px;
+        background-color: orange;
+        border-radius: 250px;
+        padding: 125px;
+      }
+      #Medicine {
+        margin: 60px;
+        display: inline-flex;
+      }
+      #ban {
+        margin-left: 60px;
+      }
+      #medicine-img {
+        width: 600px;
+      }
+      #detail {
+        font-size: 30px;
+
+        padding-bottom: 30px;
+      }
+      #cmt {
+        font-size: xx-large;
+        padding-right: 40px;
+        border-radius: 12px;
+        text-align: center;
+      }
+      #Medicine2 {
+        margin: 60px;
+        display: inline-flex;
+      }
+      #medicine-img2 {
+        width: 600px;
+      }
+      #detail2 {
+        font-size: 30px;
+        padding-bottom: 30px;
+      }
+      #box select {
+        width: 100px;
+      }
+      #left-content {
+        margin-left: auto;
+        padding: 30px;
+      }
+      #rid {
+        font-size: 50px;
+      }
+      #list-ul {
+        margin: 0;
+        padding: 0;
+        font-size: 3 0px;
+      }
+      #list-ul ol {
+        padding: 5px 0 5px 20px;
+        width: 100%;
+        background: transparent;
+        border-radius: 20px;
+        border: 2px solid greenyellow;
+      }
+      #list-ul ol b {
+        font-weight: 600;
+        font-size: 25px;
+      }
+      #di h2 {
+        font-size: 50px !important;
+        font-weight: 800 !important;
+      }
+      #di {
+        margin-right: 150px;
+      }
+      #grid {
+        display: inline-grid;
+      }
+      #img7 {
+        padding: 80px;
+        margin: 70px;
+      }
+      #name {
+        padding: 8px;
+        border-radius: 10px;
+      }
+      #password {
+        padding: 8px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <div id="left-content">
+        <label>Service:</label>
+        <select id="Hell">
+          <option value="select">Select</option>
+          <option>Tablets</option>
+          <option>Capsules</option>
+          <option>Syrups</option>
+          <option>Drops</option>
+          <option>Tubes</option>
+          <option>Injection</option>
+        </select>
+        <select id="Hell">
+          <optgroup label="Medicine">
+            <option>Select</option>
+            <option>Tablets</option>
+            <option>Capsules</option>
+            <option>Syrups</option>
+            <option>Drops</option>
+            <option>Tubes</option>
+            <option>Injection</option>
+          </optgroup>
+        </select>
+        <input id="Hell" type="text" placeholder="Search" /><br /><br />
+      </div>
+    </div>
+    <br />
+    <div id="box2">
+      The medical store owned by Ghulam Mustafa, known as GM Medical Store, will
+      be rebranded with a different name and logo to better represent the
+      business and attract more customers. This change aims to create a fresh
+      and modern image for the store while maintaining the high-quality service
+      and products it is known for in the community. At GM Medical Store,
+      customers can expect friendly and knowledgeable staff who are dedicated to
+      assisting them in finding the right products for their healthcare needs.
+      The store is well-stocked with a variety of prescription and
+      over-the-counter medications, ensuring that customers have access to a
+      wide selection of options. Ghulam Mustafa's commitment to excellence is
+      reflected in the store's reputation for reliability and customer
+      satisfaction.
+      <br /><br />
+      <li>"We are here for your better health"</li>
+      <br />
+      <div id="rd">
+        <i>
+          GM Medical Store offers a wide range of prescription and
+          over-the-counter medications to cater to the diverse needs of its
+          customers. From common cold remedies to chronic condition medications,
+          the store stocks a comprehensive selection of pharmaceutical products.
+          In addition to medications, GM Medical Store also carries a variety of
+          medical supplies and healthcare products to further assist customers
+          in managing their health and well-being.</i
+        >
+      </div>
+    </div>
+    <br /><br />
+    <div id="td">
+      <h1 align="center">"Explore Our Store"</h1>
+      In addition to its wide selection of pharmaceutical products, GM Medical
+      Store also offers convenient services such as prescription refills,
+      medication counseling, and home delivery for customers who are unable to
+      visit the store in person. With a commitment to excellence and a focus on
+      customer care, GM Medical Store has earned a reputation as a trusted
+      provider of healthcare solutions in the community. Whether you are looking
+      for over-the-counter medications, medical equipment, or specialized
+      healthcare products, GM Medical Store is your one-stop destination for all
+      your healthcare needs.GM Medical Store is staffed by knowledgeable
+      pharmacists and healthcare professionals who are dedicated to providing
+      personalized service and expert advice to every customer. Whether you have
+      questions about a specific medication, need assistance in choosing the
+      right healthcare product, or require guidance on managing a health
+      condition, the team at GM Medical Store is always ready to help. The staff
+      at GM Medical Store undergo regular training to stay updated on the latest
+      developments in the pharmaceutical industry and healthcare practices.
+    </div>
+    <div id="Medicine">
+      <img id="medicine-img" width="600px" height="600px" src="PIC/PIC.jpg" />
+      <div id="ban">
+        <div id="detail">
+          Through rigorous research and development, medicines are carefully formulated to target specific diseases and symptoms, providing relief and often curing ailments that were once considered untreatable. The field of medicine continues to evolve rapidly, driven by advancements in science, technology, and a deeper understanding of the human body's complexities.Throughout history, medicines have been derived from nature, with early civilizations using plants, minerals, and animal parts for their therapeutic properties. Ancient Egyptian papyri and Chinese texts document herbal remedies dating back thousands of years. These practices laid the foundation for pharmacology, the science of understanding the effects of substances on living organisms.
+        </div>
+        <br />
+        <input id="cmt" type="submit" value="BUY" />
+        <input id="cmt" type="submit" value="Price" />
+      </div>
+    </div>
+    <div id="Medicine2">
+      <div>
+        <div id="detail2">
+          Through rigorous research and development, medicines are carefully formulated to target specific diseases and symptoms, providing relief and often curing ailments that were once considered untreatable. The field of medicine continues to evolve rapidly, driven by advancementsin science, technology, and a deeper understanding of the human body's complexities.Throughout history, medicines have been derived fromnature, with early civilizations using plants, minerals, and animal parts for their therapeutic properties. Ancient Egyptian papyri andChinese texts document herbal remedies dating back thousands of years.These practices laid the foundation for pharmacology, the science ofunderstanding the effects of substances on living organisms.
+        </div>
+        <br /><br /><input id="cmt" type="submit" value="BUY" />
+        <input id="cmt" type="submit" value="Price" />
+      </div>
+      <img id="medicine-img2" width="600px" height="600px" src="PIC/pho.jpeg" />
+    </div>
+    <div id="ret">
+      <p id="p1">
+        Ghulam Mustafa's medical store is more than just a business; it is a
+        beacon of health and wellbeing within the community. Located at the
+        heart of the bustling neighborhood, his store stands as a testament to
+        his unwavering commitment to serving others. Stocked with a
+        comprehensive range of pharmaceuticals and healthcare products, each
+        item meticulously selected for quality and efficacy, Ghulam Mustafa
+        ensures that every customer receives not only the necessary medications
+        but also personalized care and attention. His deep understanding of
+        medical needs and dedication to staying abreast of the latest
+        advancements in healthcare make his store a trusted resource for health
+        advice and information. Beyond the shelves of medicines, Ghulam
+        Mustafa's warmth and compassion create a welcoming environment where
+        patients feel heard and supported. Whether it's a reassuring smile, a
+        knowledgeable recommendation, or timely assistance, Ghulam Mustafa's
+        medical store goes beyond the transactional to foster a sense of
+        community and wellbeing. His commitment to excellence and integrity sets
+        a standard in the industry, earning him the respect and loyalty of
+        customers and healthcare professionals alike. In every aspect, Ghulam
+        Mustafa's medical store embodies his vision of health as a cornerstone
+        of a thriving community, making a profound difference in the lives it
+        touches.
+      </p>
+      <p id="p2">
+        <b
+          >Ghulam Mustafa's medical store is a cornerstone of health and
+          wellness in the local community, known for its reliability,
+          compassion, and commitment to customer care. Nestled in a bustling
+          neighborhood, the store is meticulously organized with a wide array of
+          pharmaceuticals, over-the-counter medications, and healthcare
+          essentials, ensuring that patrons have access to everything they need
+          for their well-being. What sets Ghulam Mustafa's establishment apart
+          is not just its product range, but the personalized service provided
+          by knowledgeable staff who understand the importance of each
+          customer's health journey. Whether it's a routine prescription refill
+          or urgent medical advice, Ghulam Mustafa and his team are dedicated to
+          addressing every concern with empathy and expertise.</b
+        >
+      </p>
+      <p id="p3">
+        Beyond serving as a pharmacy, Ghulam Mustafa's store serves as a
+        community hub where people gather not only ` to pick up their
+        medications but also to seek guidance on managing health conditions or
+        navigating the complexities of healthcare. His genuine concern for the
+        welfare of others is evident in his proactive efforts to educate
+        customers about preventive care and promote healthy living practices.
+        Moreover, Ghulam Mustafa actively engages in outreach.
+      </p>
+    </div>
+    <div id="list">
+      <div id="di">
+        <h2>Medicines</h2>
+        <ul id="list-ul">
+          <ol id="first">
+            <b>1 . Ansaid</b>
+          </ol>
+          <ol id="second">
+            <b>2 . Amoxil</b>
+          </ol>
+          <ol id="third">
+            <b>3 . Rigix</b>
+          </ol>
+          <ol id="fourth">
+            <b>4 . Detran-P</b>
+          </ol>
+        </ul>
+      </div>
+      <div id="di">
+        <h2>Tubes</h2>
+        <ul id="list-ul">
+          <ol id="first">
+            <b>1 . Betnovate</b>
+          </ol>
+          <ol id="second">
+            <b>2 . Clobederm</b>
+          </ol>
+          <ol id="third">
+            <b>3 . Beta-C</b>
+          </ol>
+          <ol id="fourth">
+            <b>4 . Dicloran-gel</b>
+          </ol>
+        </ul>
+      </div>
+      <div id="di">
+        <h2>Injections</h2>
+        <ul id="list-ul">
+          <ol id="first">
+            <b>1 . Dicloran</b>
+          </ol>
+          <ol id="second">
+            <b>2 . Methycobal</b>
+          </ol>
+          <ol id="third">
+            <b>3 . Gravinate</b>
+          </ol>
+          <ol id="fourth">
+            <b>4 . Oxidil</b>
+          </ol>
+        </ul>
+      </div>
+    </div>
+    <div id="img7">
+      <div class="grid">
+        <div class="column">
+          <img src="PIC/me.jpg" width="100%" />
+          <img src="PIC/Medicine.jpg" width="100%" />
+          <img src="PIC/Cap.png" width="100%" />
+        </div>
+        <br />
+        <div class="column">
+          <img src="PIC/me.jpg" width="100%" />
+          <img src="PIC/Medicine.jpg" width="100%" />
+          <img src="PIC/tablet.jpg" width="100%" />
+        </div>
+      </div>
+    </div>
+    <form>
+      <div id="src">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <label for="Name" id="fn"> <b>NAME : </b></label>
+        <input id="name" type="text" value="" placeholder="Name" />
+        <br /><br /><br />
+        <label for="password" id="fn"><b>PASSWORD : </b></label>
+        <input
+          id="password"
+          type="password"
+          fname=""
+          placeholder="Enter Password"
+        />
+        <br /><br />
+        <input id="cmt" type="submit" value="Submit" />
+        <input id="cmt" type="reset" value="reset" />
+      </div>
+    </form>
+    <br />
+    <div id="main">
+      <div id="left-content">
+        Contact Us
+        <li>03024513367</li>
+        <li>chmustafa429@gmail.com</li>
+      </div>
+    </div>
+  </body>
+</html>
